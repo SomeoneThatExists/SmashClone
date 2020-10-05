@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://redghost.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Movingplatform.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.1424, 30.212 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RedBOI" parent="." instance=ExtResource( 1 )]
+position = Vector2( 576.362, 341.677 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 467.356, 520.441 )
+scale = Vector2( 8.83432, 2.60659 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="icon" type="Sprite" parent="StaticBody2D"]
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 516, 298 )
+current = true
+zoom = Vector2( 1.371, 1.386 )
+
+[node name="Movingplatform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 330.219, 286.545 )
