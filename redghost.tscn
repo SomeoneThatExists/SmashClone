@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://redghost.gd" type="Script" id=1]
-[ext_resource path="res://RedGhost/Red_ghost_attack.png" type="Texture" id=2]
+[ext_resource path="res://Character/Red_ghost_attack.png" type="Texture" id=2]
 [ext_resource path="res://RedGhost/attack.tres" type="Animation" id=3]
 [ext_resource path="res://RedGhost/idle.tres" type="Animation" id=4]
 
@@ -18,7 +18,7 @@ script = ExtResource( 1 )
 [node name="Red_ghost_attack" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 hframes = 7
-frame = 6
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.503334, 2.90426 )
